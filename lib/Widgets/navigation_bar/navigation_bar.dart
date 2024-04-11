@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:responsive_builder/responsive_builder.dart';
+import 'package:sdk_school/Widgets/navigation_bar/navigation_bar_tablet_desktop.dart';
+import 'logo/Nav_Bar_Logo.dart';
+import 'nav_bar_item.dart';
+import 'navigation_bar_mobile.dart';
 
 
 class Navigation_Bar extends StatelessWidget {
@@ -7,40 +12,12 @@ class Navigation_Bar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 100,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          SizedBox(height: 80, width: 150, child: Image.asset("lib/assets/Group_27.png"),
-          ),
-          Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              _NavBarItem("Settings"),
-              SizedBox(width: 80,),
-              _NavBarItem("Buy"),
-              SizedBox(width: 80,),
-            ],
-          )
-        ],
-      ),
+    return ScreenTypeLayout.builder(
+      mobile: (BuildContext context) => NavBarMobile(),
+      tablet: (BuildContext context) => NavBarTabletDesktop(),
     );
   }
 }
 
-class _NavBarItem extends StatelessWidget {
-  final String title;
-  const _NavBarItem(this.title);
 
-  @override
-  Widget build(BuildContext context) {
-    return Text(title,
-    style: GoogleFonts.bebasNeue(
-      letterSpacing: 2,
-        textStyle: TextStyle(
-      fontWeight: FontWeight.bold,
-    )));
-  }
-}
 
