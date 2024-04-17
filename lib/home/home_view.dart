@@ -7,6 +7,7 @@ import 'package:sdk_school/home/home_view_desktop.dart';
 import 'package:sdk_school/home/home_view_mobile.dart';
 
 import '../Widgets/details/details.dart';
+import '../Widgets/drawer/navigation_drawer.dart';
 
 
 
@@ -15,22 +16,11 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white10,
-      body: Centered_View(
-
-        child: Column(
-          children: [
-            Navigation_Bar(),
-            Expanded(child: ScreenTypeLayout.builder(
-              mobile: (BuildContext context) => HomeViewMobile(),
-              tablet: (BuildContext context) => HomeViewMobile(),
-              desktop: (BuildContext context) => HomeViewDesktop(),
-            ),
-            )
-          ],
-        ),
-      )
+    final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+    return ScreenTypeLayout.builder(
+                mobile: (BuildContext context) => HomeViewMobile(),
+                tablet: (BuildContext context) => HomeViewMobile(),
+                desktop: (BuildContext context) => HomeViewDesktop(),
     );
   }
 }
