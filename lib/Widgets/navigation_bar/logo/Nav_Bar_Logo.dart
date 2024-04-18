@@ -12,6 +12,7 @@ class NavBarLogo extends StatelessWidget {
     return GestureDetector(
       onTap: (){
         locator<NavigationService>().navigateTo(navigationPath);
+        Scaffold.of(context).closeDrawer();
       },
       child: Container(
         child:  SizedBox(height: 80, width: 150, child: Image.asset("lib/assets/Group_27.png"),

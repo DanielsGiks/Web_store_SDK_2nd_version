@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sdk_school/routing/route_names.dart';
 
@@ -16,10 +17,10 @@ class NavDrawer extends StatelessWidget {
         boxShadow: [BoxShadow(color: Colors.black12, blurRadius: 16,),],
       ),
       child: Column(
-        children: [
+        children: const [
           NavDrawerHeader(),
-          DrawerItem(title: 'Settings', icon: Icon(Icons.settings), navigationPath: SettingsRoute,),
-          DrawerItem(title: 'Buy', icon: Icon(Icons.wallet_outlined), navigationPath: BuyRoute,),
+          DrawerItem(title: 'Blog', icon: CupertinoIcons.airplane, navigationPath: SettingsRoute,),
+          DrawerItem(title: 'Buy', icon: CupertinoIcons.bag_fill_badge_plus, navigationPath: BuyRoute,),
         ],
       ),
     );

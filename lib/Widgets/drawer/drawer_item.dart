@@ -4,7 +4,7 @@ import 'package:sdk_school/Widgets/navigation_bar/nav_bar_item.dart';
 
 class DrawerItem extends StatelessWidget {
   final String title;
-  final Icon icon;
+  final IconData icon;
   final String navigationPath;
   const DrawerItem({required this.title, required this.icon, required this.navigationPath});
 
@@ -14,8 +14,8 @@ class DrawerItem extends StatelessWidget {
       padding: const EdgeInsets.only(left: 16, top: 30),
       child: Row(
         children: [
-          Icon(Icons.abc),
-          SizedBox(height: 8,),
+          Icon(icon),
+          SizedBox(width: 8,),
           NavBarItem(title, navigationPath)
         ],
       ),

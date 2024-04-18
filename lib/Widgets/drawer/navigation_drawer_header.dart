@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../../routing/route_names.dart';
+import '../navigation_bar/logo/Nav_Bar_Logo.dart';
+
 class NavDrawerHeader extends StatelessWidget {
   const NavDrawerHeader({Key? key}) : super(key: key);
 
@@ -12,12 +15,7 @@ class NavDrawerHeader extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Text("Explore",
-          style: TextStyle(
-            fontSize: 18,
-            fontWeight: FontWeight.w800,
-            color: Colors.black,
-          ),),
+          NavBarLogo( navigationPath: HomeRoute,),
           Text("Tap here",
           style: TextStyle(
             color: Colors.black,

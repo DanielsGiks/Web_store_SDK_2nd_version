@@ -19,7 +19,7 @@ class NavBarTabletDesktop extends StatelessWidget {
           Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              NavBarItem("Settings", SettingsRoute),
+              NavBarItem("Blog", SettingsRoute),
               SizedBox(width: 80,),
               NavBarItem("Buy", BuyRoute),
             ],

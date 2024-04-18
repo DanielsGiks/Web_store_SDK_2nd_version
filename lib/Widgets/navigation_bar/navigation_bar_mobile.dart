@@ -15,7 +15,7 @@ class NavBarMobile extends StatelessWidget {
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          IconButton(onPressed: () => Scaffold.of(context).openDrawer(), icon: const Icon(CupertinoIcons.arrow_right)),
+          IconButton(onPressed: () => Scaffold.of(context).openDrawer(), icon: Icon(CupertinoIcons.bars)),
           // ElevatedButton.icon(
           // onPressed: (){}, icon: Icon(Icons.abc), label: Text(""),
           // )
