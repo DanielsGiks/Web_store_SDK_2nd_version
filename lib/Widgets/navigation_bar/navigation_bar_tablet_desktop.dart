@@ -22,6 +22,8 @@ class NavBarTabletDesktop extends StatelessWidget {
               NavBarItem("Blog", SettingsRoute),
               SizedBox(width: 80,),
               NavBarItem("Buy", BuyRoute),
+              SizedBox(width: 80,),
+              NavBarItem("Sign in", SignInRoute),
             ],
           )
         ],

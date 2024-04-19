@@ -7,6 +7,8 @@ import 'package:sdk_school/routing/route_names.dart';
 
 import '../Blog/blog.dart';
 import '../Buy/buy.dart';
+import '../sign_in/sign_in_page.dart';
+
 
 Route<dynamic> generateRoute(RouteSettings settings){
   switch (settings.name){
@@ -16,6 +18,8 @@ Route<dynamic> generateRoute(RouteSettings settings){
       return _getPageRoute(BlogView());
     case BuyRoute:
       return _getPageRoute(BuyView());
+    case SignInRoute:
+      return _getPageRoute(SignIn());
     default:
       return _getPageRoute(HomeView());
   }

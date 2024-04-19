@@ -9,6 +9,8 @@ class HomeViewDesktop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisSize: MainAxisSize.max,
         children: [
         Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -19,7 +21,9 @@ class HomeViewDesktop extends StatelessWidget {
     Call_To_Action(title: "Buy tickets"),
     ],
     ),
-    Expanded(child: Image.asset("lib/assets/Tourist girl.png", width: 420,)),
+    Expanded(
+      flex: 2,
+        child: Image.asset("lib/assets/Tourist girl.png", width: MediaQuery.of(context).size.width/1.2,)),
     ],
     );
   }
