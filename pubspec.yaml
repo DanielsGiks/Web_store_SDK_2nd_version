@@ -46,6 +46,9 @@ dependencies:
   http: ^0.13.5
   equatable: ^2.0.5
   js: ^0.6.5
+  firebase_core: ^2.30.0
+  cloud_firestore: ^4.17.0
+  firebase_auth: ^4.19.3
 
 
 dev_dependencies:
@@ -72,6 +75,9 @@ flutter:
   assets:
     - lib/assets/Group_27.png
     - lib/assets/Tourist girl.png
+    - lib/assets/Rome.jpg
+    - lib/assets/Barcelona.jpg
+    - lib/assets/Paris.jpg
   fonts:
      - family: BebasNeue
        fonts:

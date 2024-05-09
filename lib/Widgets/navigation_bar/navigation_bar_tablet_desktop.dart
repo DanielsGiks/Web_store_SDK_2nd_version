@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import '../../globals.dart';
 import '../../routing/route_names.dart';
 import 'logo/Nav_Bar_Logo.dart';
 import 'nav_bar_item.dart';
+import 'package:sdk_school/globals.dart' as globals;
 import 'package:google_fonts/google_fonts.dart';
 
 
 class NavBarTabletDesktop extends StatelessWidget {
-  const NavBarTabletDesktop({Key? key}) : super(key: key);
+   final bool Logged;
+   NavBarTabletDesktop({Key? key, required this.Logged}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +27,11 @@ class NavBarTabletDesktop extends StatelessWidget {
               SizedBox(width: 80,),
               NavBarItem("Buy", BuyRoute),
               SizedBox(width: 80,),
+              //logoutButton(),
               NavBarItem("Sign in", SignInRoute),
+              Visibility(
+                visible: Logged,
+                  child: NavBarItem("Logout", HomeRoute)),
             ],
           )
         ],
@@ -31,3 +39,7 @@ class NavBarTabletDesktop extends StatelessWidget {
     );
   }
 }
+
+// Widget logoutButton(){
+//   return globals.isLogedIn == true ? NavBarItem('Logout', HomeRoute) : NavBarItem("Sign In", SignInRoute);
+// }

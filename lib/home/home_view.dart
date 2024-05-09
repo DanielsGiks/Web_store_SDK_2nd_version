@@ -11,16 +11,21 @@ import '../Widgets/drawer/navigation_drawer.dart';
 
 
 
-class HomeView extends StatelessWidget {
+class HomeView extends StatefulWidget {
   const HomeView({Key? key}) : super(key: key);
 
+  @override
+  State<HomeView> createState() => _HomeViewState();
+}
+
+class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
     final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
     return ScreenTypeLayout.builder(
-                mobile: (BuildContext context) => HomeViewMobile(),
-                tablet: (BuildContext context) => HomeViewMobile(),
-                desktop: (BuildContext context) => HomeViewDesktop(),
+      mobile: (BuildContext context) => HomeViewMobile(),
+      tablet: (BuildContext context) => HomeViewMobile(),
+      desktop: (BuildContext context) => HomeViewDesktop(),
     );
   }
 }
