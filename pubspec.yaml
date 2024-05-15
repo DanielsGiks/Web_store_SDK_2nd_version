@@ -49,6 +49,9 @@ dependencies:
   firebase_core: ^2.30.0
   cloud_firestore: ^4.17.0
   firebase_auth: ^4.19.3
+  collection: ^1.18.0
+  flutter_credit_card: ^4.0.1
+  intl: ^0.19.0
 
 
 dev_dependencies:
@@ -71,7 +74,7 @@ flutter:
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
-  #uses-material-design: true
+  uses-material-design: true
   assets:
     - lib/assets/Group_27.png
     - lib/assets/Tourist girl.png

@@ -9,6 +9,7 @@ import 'package:sdk_school/home/logedIN/Home_View_when_loged_in.dart';
 import 'package:sdk_school/home/logedIN/Home_view_desktop_when_loged.dart';
 import 'package:sdk_school/routing/route_names.dart';
 import 'package:sdk_school/sign_in/login_or_sign_in.dart';
+import 'package:sdk_school/cart/cart_page.dart';
 
 import '../Blog/blog.dart';
 import '../Buy/buy.dart';
@@ -25,6 +26,8 @@ Route<dynamic> generateRoute(RouteSettings settings){
       return _getPageRoute(BuyView());
     case SignInRoute:
       return _getPageRoute(LoginOrSignIn());
+    case CartRoute:
+      return _getPageRoute(CartPage());
     // case HomeRouteLoged:
     //   return _getPageRoute(HomeViewDesktopLogedIn());
     case RouteLoged:

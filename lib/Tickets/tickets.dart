@@ -31,9 +31,11 @@ enum TicketsCountry{
 class FlightTime{
   String AmPm;
   double time;
+  double price;
 
   FlightTime({
     required this.AmPm,
     required this.time,
+    required this.price,
     });
 }

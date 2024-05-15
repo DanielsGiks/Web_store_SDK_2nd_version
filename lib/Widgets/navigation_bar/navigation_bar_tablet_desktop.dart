@@ -29,9 +29,8 @@ class NavBarTabletDesktop extends StatelessWidget {
               SizedBox(width: 80,),
               //logoutButton(),
               NavBarItem("Sign in", SignInRoute),
-              Visibility(
-                visible: Logged,
-                  child: NavBarItem("Logout", HomeRoute)),
+              SizedBox(width: 80,),
+              NavBarItem("Cart", CartRoute),
             ],
           )
         ],

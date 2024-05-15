@@ -36,8 +36,12 @@ class _LayoutTemplateState extends State<LayoutTemplateLoged> {
           drawer: sizingInformation.deviceScreenType == DeviceScreenType.mobile ? NavDrawer() : null,
           backgroundColor: Colors.white10,
           body: Centered_View(
-
-            child: Expanded(child: TicketsPage()),
+            child: Column(
+              children: [
+                NavigationBarLoged(),
+                Expanded(child: TicketsPage()),
+              ],
+            ),
           )
       ),
     );

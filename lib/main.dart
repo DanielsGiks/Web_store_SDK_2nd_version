@@ -9,6 +9,7 @@ import 'package:sdk_school/home/layout_template/layout_template_loged_in.dart';
 import 'package:sdk_school/home/layout_template/loged_notLoged.dart';
 import 'package:sdk_school/locator.dart';
 import 'package:sdk_school/routing/route_names.dart';
+import 'package:sdk_school/sign_in/auth.dart';
 import 'globals.dart' as globals;
 
 import 'firebase_options.dart';
@@ -61,7 +62,7 @@ class _MyAppState extends State<MyApp> {
         primarySwatch: Colors.blue,
         textTheme: Theme.of(context).textTheme.apply(fontFamily: 'Bebas Neue'),
       ),
-      home: LayoutTemplate()
+      home: AuthPage()
     );
   }
 }

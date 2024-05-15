@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:sdk_school/Widgets/navigation_bar/navigation_bar_loged/nav_bar_item+logout.dart';
 import '../../../routing/route_names.dart';
 import '../logo/Nav_Bar_Logo.dart';
 import '../nav_bar_item.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import 'nav_bar_item_Cart.dart';
 
 
 class NavBarTabletDesktopLoged extends StatelessWidget {
@@ -23,7 +26,9 @@ class NavBarTabletDesktopLoged extends StatelessWidget {
               SizedBox(width: 80,),
               NavBarItem("Buy", BuyRoute),
               SizedBox(width: 80,),
-              NavBarItem("Logout", HomeRoute),
+              NavBarItemCart("Cart"),
+              SizedBox(width: 80,),
+              NavBarItemLogout("Logout"),
             ],
           )
         ],
