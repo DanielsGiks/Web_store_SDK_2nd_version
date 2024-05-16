@@ -10,7 +10,7 @@ WORKDIR /app/
 COPY . .
 
 # Install the application dependencies
-EXPOSE 3000
+EXPOSE 8080
 
 # Define the entry point for the container
 CMD ["npm", "start"]
